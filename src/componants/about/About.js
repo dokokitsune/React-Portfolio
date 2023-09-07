@@ -1,14 +1,14 @@
 import React from "react";
 
-class About extends React.Component{
+function About_Me(){
 
-  render() {
+
     return (
       <>
 
       </>
     )
-  }
+  
 }
 
-export default About;
+export default About_Me;

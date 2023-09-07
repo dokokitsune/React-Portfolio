@@ -1,15 +1,19 @@
 import React from 'react';
+import Navbar from "./componants/navbar/Navi";
+import Contact_Me from './componants/contact/Contact';
 
 
 
 
-function App() {
+
+export default function App() {
   return (
     <>
+    <Navbar/>
     
     
     </>
   );
 }
 
-export default App;
+

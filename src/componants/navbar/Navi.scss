@@ -1,0 +1,42 @@
+*{
+  font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.navbar {
+  position:fixed;
+  background-color:#1c1c1e !important;
+  top: 0;
+  width: 100vw;
+
+
+  letter-spacing: 2px;
+  
+  
+  padding-bottom: 10px;
+  transition: all 0.3s ease-in-out 0s;
+  border-radius: 0 !important;
+  font-size: 1.5rem;
+
+  text-align: right;
+  vertical-align: center;
+  
+
+  
+}
+
+.navbar a {
+  color: white;
+  font-size: 10;
+}
+
+.mr-auto{
+  justify-content: center;
+}
+
+.nav-link:hover{
+  color: #029cd7;
+}
+
+
+
+

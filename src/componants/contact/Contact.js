@@ -1,14 +1,14 @@
 import React from "react";
 
-class Contact_Me extends React.Component {
+function Contact_Me() {
 
-  render() {
+
     return(
       <>
 
       </>
     )
-  }
+  
 }
 
 export default Contact_Me;
