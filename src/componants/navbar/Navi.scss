@@ -2,16 +2,21 @@
   font-family: Georgia, 'Times New Roman', Times, serif;
 }
 
+*::after{
+  box-sizing: border-box;
+}
+
 .navbar {
   position:fixed;
   background-color:#1c1c1e !important;
   top: 0;
+  left: 0;
   width: 100vw;
 
 
   letter-spacing: 2px;
-  
-  
+
+
   padding-bottom: 10px;
   transition: all 0.3s ease-in-out 0s;
   border-radius: 0 !important;
@@ -19,18 +24,30 @@
 
   text-align: right;
   vertical-align: center;
-  
 
-  
+
+
+}
+
+#about-dropdown{
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
 }
 
 .navbar a {
-  color: white;
+  color: white ;
   font-size: 10;
+  // background-color: rgb(32, 32, 156);
+  margin: 20px;
+  padding: 10px;
+  // text-decoration: none;
+  border-radius: 20px;
 }
 
-.mr-auto{
+.me-auto{
   justify-content: center;
+  padding-bottom: 10px;
+
+
 }
 
 .nav-link:hover{
