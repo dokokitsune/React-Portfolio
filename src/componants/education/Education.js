@@ -1,17 +1,12 @@
 import React from "react";
 
 
-
-function Home() {
+function Education(){
 
   return(
     <>
-    
-
     </>
   )
-
 }
 
-
-export default Home;
+export default Education;

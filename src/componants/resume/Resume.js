@@ -1,17 +1,11 @@
 import React from "react";
 
-
-
-function Home() {
+function Resume(){
 
   return(
     <>
-    
-
     </>
   )
-
 }
 
-
-export default Home;
+export default Resume;

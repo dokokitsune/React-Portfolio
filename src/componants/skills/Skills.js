@@ -1,17 +1,14 @@
 import React from "react";
 
 
-
-function Home() {
+function Skills(){
 
   return(
     <>
-    
 
     </>
   )
-
 }
 
 
-export default Home;
+export default Skills;
