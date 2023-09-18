@@ -1,3 +1,5 @@
+
+
 *{
   font-family: Georgia, 'Times New Roman', Times, serif;
 }
@@ -25,11 +27,12 @@
 
 
 }
-.nav-item  {
+// .nav-item  {
   
-  color: white;
+//   color: white;
 
-}
+// }
+
 
 
 // #about-dropdown{
@@ -59,9 +62,24 @@
 
 }
 
+
+
+.nav-link{
+  color:white;
+}
+
 .nav-link:hover{
   color: #029cd7;
 }
+
+.nav-link a.active{
+  color:#029cd7;
+  // text-decoration: none;
+}
+
+
+
+
 
 
 
