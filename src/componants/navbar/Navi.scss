@@ -32,6 +32,9 @@
 
 
 
+
+
+
 // .nav-item  {
 
 //   color: white;
@@ -74,9 +77,7 @@
 
 .nav-underline .nav-link.active{
   font-weight: normal;
-  border-bottom-color:#029cd7;
-
-
+  border-bottom-color:#029bd700;
 }
 .nav-underline .nav-link{
   color:white;
@@ -100,15 +101,22 @@
 
 }
 
+
 .nav-underline .nav-link:hover::after{
   transform: scale(.4);
   transform-origin: bottom left;
 
 }
 
-.nav-underline .nav-link:focus::after, .nav-link-underline .nav-link.active{
+.nav-underline .nav-link:focus::after{
   transform: scaleX(1);
   transform-origin: bottom left;
+}
+
+.nav-underline .nav-link.active::after{
+  transform: scaleX(1);
+  transform-origin: bottom left;
+  transition: transform 0.1ms ease-out;
 }
 
 
