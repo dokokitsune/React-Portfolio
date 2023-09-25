@@ -4,7 +4,7 @@ import Nav from "react-bootstrap/Nav";
 import "bootstrap/dist/css/bootstrap.css"
 
 import "./Navi.scss"
-import { Link, NavLink, useLocation } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 // import { useLocation } from "react-router-dom";
 
 function Navi(){
@@ -27,17 +27,12 @@ function Navi(){
           <Navbar.Toggle aria-controls="responsive-navbar-nav" />
           <Navbar.Collapse id="basic-navbar-nav" className="justify-content-end">
           <Nav className="ms-auto" variant="underline">
-            
-              <Nav.Link as={Link} to={"/"} href="/" active={navActive === "/"}  >Home</Nav.Link>
-                {/* <NavDropdown title="About Me" className="nav-item" id="about-dropdown">style={({isActive}) => (isActive ? (color: '#029cd7') : (color: 'white'))}
-                  <NavDropdown.Item href="/about" className="nav-dropdown-text">Summery</NavDropdown.Item>
-                  <NavDropdown.Item href="/projects" className="nav-dropdown-text">My Projects</NavDropdown.Item>#029cd7;
-                </NavDropdown> */}
-                <Nav.Link as={Link} to={"/about"} href="/about" active={navActive === "/about"} className="nav-item">About Me</Nav.Link>
-                <Nav.Link as={Link} to={"/skills"} href="/skills" active={navActive === "/skills"} className="nav-item">Skills</Nav.Link>
-                <Nav.Link as={Link} to={"/projects"} href="/projects" active={navActive === "/projects"} className="nav-item">Projects</Nav.Link>
-                <Nav.Link as={Link} to={"/contact"} href="/contact" active={navActive === "/contact"} className="nav-item">Contact Me</Nav.Link>
-                <Nav.Link as={Link} to={"/resume"} href="/resume" active={navActive === "/resume"} className="nav-item">Resume</Nav.Link>
+                <Nav.Link as={Link} to={"/"} active={navActive === "/"}  >Home</Nav.Link>
+                <Nav.Link as={Link} to={"/about"}  active={navActive === "/about"} className="nav-item nav-link-ltr">About Me</Nav.Link>
+                <Nav.Link as={Link} to={"/skills"} active={navActive === "/skills"} className="nav-item">Skills</Nav.Link>
+                <Nav.Link as={Link} to={"/projects"} active={navActive === "/projects"} className="nav-item">Projects</Nav.Link>
+                <Nav.Link as={Link} to={"/contact"} active={navActive === "/contact"} className="nav-item">Contact Me</Nav.Link>
+                <Nav.Link as={Link} to={"/resume"}  active={navActive === "/resume"} className="nav-item">Resume</Nav.Link>
               </Nav>
 
           </Navbar.Collapse>
