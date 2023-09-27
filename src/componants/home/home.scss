@@ -6,3 +6,20 @@ body{
   color: white;
 
 }
+
+.icons{
+  display: flex;
+  margin-top: 50px;
+  justify-items: space-between;
+
+
+}
+
+.iconElement{
+  padding: 15px;
+}
+
+.iconElement button:hover{
+  color: #029cd7;
+
+}

@@ -15,12 +15,6 @@ import Resume from './componants/resume/Resume'
 
 function App() {
 
-
-
-
-
-
-
   return (
     <>
 
