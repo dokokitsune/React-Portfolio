@@ -4,22 +4,35 @@ body{
 
 .typeWriter{
   color: white;
+  font-size: 2em;
 
 }
 
 .icons{
-  display: flex;
-  margin-top: 50px;
-  justify-items: space-between;
+  display: block;
+  margin-top: 10em;
 
-
+  justify-content: space-between;
 }
 
 .iconElement{
-  padding: 15px;
+  margin: 40px;
+
 }
 
-.iconElement button:hover{
-  color: #029cd7;
+#linkedin, #github{
+  transition: 0.5s;
+}
 
+#linkedin:hover{
+  color: #029cd7 !important;
+  cursor: pointer;
+  transition: 0.5s;
+}
+
+
+#github:hover{
+  transition: 0.5s ;
+  color: gray !important;
+  cursor: pointer;
 }

@@ -3,7 +3,7 @@ import ReactTyped from "react-typed";
 
 import "./home.scss"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faLinkedin, faGithub, faGithubSquare } from "@fortawesome/free-brands-svg-icons";
+import { faLinkedin, faGithubSquare } from "@fortawesome/free-brands-svg-icons";
 
 
 
@@ -18,7 +18,7 @@ function Home() {
 
       <h1>
         <ReactTyped className = "typeWriter position-absolute top-50 start-50 translate-middle"
-          strings={["Weston Wood", "ACM Web Leader", "CSULA Junior"]}
+          strings={["Weston Wood", "ACM Web Officer", "CSU Los Angeles Junior"]}
           typeSpeed={100}
           loop
           backSpeed={20}
@@ -29,8 +29,14 @@ function Home() {
       </h1>
         <div className="icons position-absolute top-50 start-50 translate-middle">
 
-          <FontAwesomeIcon className="iconElement" id="linkedin" href="https://www.linkedin.com/in/weston-wood9802/" icon={faLinkedin} style={{color: "white",}} size="2xl"/>
-          <FontAwesomeIcon className="iconElement" id="github" href="https://github.com/dokokitsune" icon={faGithubSquare} style={{color: "white",}} size="2xl" />
+          <a href="https://www.linkedin.com/in/weston-wood9802/" target="_blank" style={{cursor: "default",}}>
+            <FontAwesomeIcon className="iconElement"  id="linkedin" icon={faLinkedin} style={{color: "white",}} size="4x"/>
+          </a>
+
+          <a href="https://github.com/dokokitsune" target="_blank" >
+            <FontAwesomeIcon className="iconElement" id="github"  icon={faGithubSquare} style={{color: "white",}} size="4x" />
+          </a>
+
         </div>
 
       </div>
