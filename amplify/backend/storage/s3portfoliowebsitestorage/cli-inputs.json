@@ -2,8 +2,10 @@
   "resourceName": "s3portfoliowebsitestorage",
   "bucketName": "portfolio-website-storage",
   "policyUUID": "942a6e7d",
-  "storageAccess": "auth",
-  "guestAccess": [],
+  "storageAccess": "authAndGuest",
+  "guestAccess": [
+    "READ"
+  ],
   "authAccess": [
     "READ",
     "CREATE_AND_UPDATE",
