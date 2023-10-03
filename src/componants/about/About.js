@@ -1,18 +1,26 @@
-import React from "react";
+import React, { useState } from "react";
 import { Image } from "react-bootstrap";
 
 import "./about.scss"
-import aws from "../../awsconfig";
 import { Storage } from "@aws-amplify/storage";
 
+
+
+
 function About_Me(){
+
+
+  //image state
+  const [image, setImage] = useState('');
+
+
   const aboutMeIMG = async () => {
-    let data = await Storage.get('Pictures/IndexPhoto.jpg', {level: "public"});
-
-    return data;
+    const data = await Storage.get("Pictures/IndexPhoto.jpg");
+    setImage(data);
   }
+  aboutMeIMG();
 
-  console.log(aboutMeIMG());
+
 
 
 
@@ -22,7 +30,14 @@ function About_Me(){
 
     return (
       <>
-      <Image className="top-50 start-50" src={(aboutMeIMG())}></Image>
+
+        <div className="aboutMe translate-middle-x start-50 top-50 position-absolute">
+          Hello testing testing
+
+        </div>
+
+        <Image className="image position-absolute translate-middle-x start-50 top-50" alt="new"  src={image} rel="noreferrer" rounded />
+
 
       </>
     )
