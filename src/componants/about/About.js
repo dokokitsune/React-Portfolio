@@ -15,7 +15,9 @@ function About_Me(){
 
 
   const aboutMeIMG = async () => {
-    const data = await Storage.get("Pictures/IndexPhoto.jpg");
+    const data = await Storage.get("Pictures/IndexPhoto.jpg", {
+      expires: 30
+    });
     setImage(data);
   }
   aboutMeIMG();

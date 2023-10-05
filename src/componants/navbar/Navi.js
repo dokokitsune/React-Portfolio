@@ -1,7 +1,9 @@
-import React from "react";
+import React , {useState, useEffect}from "react";
 import { Container, Navbar } from "react-bootstrap";
 import Nav from "react-bootstrap/Nav";
 import "bootstrap/dist/css/bootstrap.css"
+
+import { Storage } from "aws-amplify";
 
 import "./Navi.scss"
 import { Link, useLocation } from "react-router-dom";
@@ -10,11 +12,25 @@ import { Link, useLocation } from "react-router-dom";
 function Navi(){
 
 
-  const [navActive, setNavActive] = React.useState(null);
+  const [navActive, setNavActive] = useState(null);
+  const [Resume, setResume] = useState('');
 
   const location = useLocation();
 
-  React.useEffect(() => {
+
+
+  const getResume = async () => {
+    const data = await Storage.get('Tech-Resume.pdf', {
+      expires: 30
+    });
+    setResume(data);
+  }
+
+
+
+
+
+  useEffect(() => {
     setNavActive(location.pathname);
 
   }  ,[location]);
@@ -32,7 +48,7 @@ function Navi(){
                 <Nav.Link as={Link} to={"/skills"} active={navActive === "/skills"} className="nav-item">Skills</Nav.Link>
                 <Nav.Link as={Link} to={"/projects"} active={navActive === "/projects"} className="nav-item">Projects</Nav.Link>
                 <Nav.Link as={Link} to={"/contact"} active={navActive === "/contact"} className="nav-item">Contact Me</Nav.Link>
-                <Nav.Link as={Link} to={"/resume"}  active={navActive === "/resume"} className="nav-item">Resume</Nav.Link>
+                <Nav.Link as={Link} onClick={getResume} to={Resume}  target="_blank" className="nav-item-resume" style={{borderBottomColor: "#1c1c1e"}}>Resume</Nav.Link>
               </Nav>
 
           </Navbar.Collapse>

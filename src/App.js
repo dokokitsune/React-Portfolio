@@ -9,7 +9,7 @@ import Home from './componants/home/Home';
 import About_Me from './componants/about/About'
 import Projects from './componants/projects/Projects'
 import Skills from './componants/skills/Skills';
-import Resume from './componants/resume/Resume'
+
 
 
 function App() {
@@ -23,7 +23,6 @@ function App() {
         <Route path='/projects' element={<Projects />} />
         <Route path='/contact' element={<Contact_Me />} />
         <Route path='/skills' element={<Skills />} />
-        <Route path='/resume' element={<Resume />} />
       </Routes>
       <Navi />
     </>
