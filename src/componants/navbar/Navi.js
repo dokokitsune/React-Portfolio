@@ -24,6 +24,7 @@ function Navi(){
       expires: 30
     });
     setResume(data);
+    Resume = setResume;
   }
 
 
