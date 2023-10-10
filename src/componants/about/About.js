@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { Image } from "react-bootstrap";
 
+
 import "./about.scss"
 import { Storage } from "@aws-amplify/storage";
 
@@ -12,6 +13,7 @@ function About_Me(){
 
   //image state
   const [image, setImage] = useState('');
+  const [loaded, setLoaded] = useState(false);
 
 
   const aboutMeIMG = async () => {
@@ -41,8 +43,16 @@ function About_Me(){
 
 
         </div>
+        {loaded ? null : (
+          <div style={{
 
-        <Image className="image position-absolute translate-middle-x start-50 top-50" alt="new"  src={image} rel="noreferrer" rounded />
+          }} />
+        )}
+
+        <Image className="image position-absolute translate-middle-x start-50 top-50"
+          style={loaded ? {} : {display: 'none'}}
+          onLoad={() => setLoaded(true)}
+          src={image} referrerPolicy="no-referrer"  rounded />
 
 
       </>

@@ -14,11 +14,13 @@
   // display: none;
   margin-top: -25vh;
   margin-left: 20vw;
-  width: 50%;
-  height: 50%;
+  width: auto;
+  height: auto;
+  max-width: 384px;
+  max-height: 510px;
   animation: fadeIn ease 2s;
   animation-fill-mode: forwards;
-  object-fit:contain;
+  // object-fit:contain;
 }
 
 .aboutMe{

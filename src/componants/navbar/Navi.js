@@ -19,13 +19,14 @@ function Navi(){
 
 
 
+
   const getResume = async () => {
     const data = await Storage.get('Tech-Resume.pdf', {
-      expires: 30
     });
+    // console.log(data);
     setResume(data);
-    Resume = setResume;
   }
+
 
 
 
@@ -33,7 +34,6 @@ function Navi(){
 
   useEffect(() => {
     setNavActive(location.pathname);
-
   }  ,[location]);
 
     return(
@@ -49,7 +49,7 @@ function Navi(){
                 <Nav.Link as={Link} to={"/skills"} active={navActive === "/skills"} className="nav-item">Skills</Nav.Link>
                 <Nav.Link as={Link} to={"/projects"} active={navActive === "/projects"} className="nav-item">Projects</Nav.Link>
                 <Nav.Link as={Link} to={"/contact"} active={navActive === "/contact"} className="nav-item">Contact Me</Nav.Link>
-                <Nav.Link as={Link} onClick={getResume} to={Resume}  target="_blank" className="nav-item-resume" style={{borderBottomColor: "#1c1c1e"}}>Resume</Nav.Link>
+                <Nav.Link as={Link} to={Resume} onClick={getResume}  target="_blank" className="nav-item-resume" style={{borderBottomColor: "#1c1c1e"}}>Resume</Nav.Link>
               </Nav>
 
           </Navbar.Collapse>
